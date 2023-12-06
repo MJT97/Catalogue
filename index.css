@@ -1,0 +1,205 @@
+html
+{
+    scroll-behavior: smooth;
+}
+*
+{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+header
+{
+    border: none;
+    height: 40px;
+    padding-bottom: 20px;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+header fieldset
+{
+    border-style: none;
+}
+header ul
+{
+    list-style: none;
+    display: flex;
+}
+
+header li
+{
+    margin-top: 10px;
+}
+
+header a
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+#logo
+{
+    float: left;
+    padding: 0;
+    margin: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#tabs
+{
+    float: right;
+    padding: 0;
+    margin-top: 10px;
+}
+#tabs li
+{
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#tabs a
+{
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    transition: color 300ms ease;
+}
+#tabs a:hover
+{
+    color: blue;
+}
+
+
+main, section
+{
+    height: 100vh;
+    width: auto;
+}
+.cards
+{
+    display: flex;
+    border-style: none;
+    height: 100%;
+    width: 100%;
+}
+.card
+{
+    border-radius: 20px;
+    margin: 10px;
+    height: 95%;
+    background-color: #ffffff;
+    flex: 1;
+    transition: 300ms all ease;
+}
+.card:hover
+{
+    flex: 3;
+    background-color: rgb(207, 207, 207);
+}
+.contacts
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-around;
+    height: 80%;
+    width: 90%;
+    margin-left: 5%;
+    border-style: none;
+
+}
+#links li
+{
+    list-style: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#pic
+{
+    width: 50%;
+    height: 100%;
+}
+#par
+{
+    width: 50%;
+}
+#links
+{
+    width: 99%;
+    height: 89%;
+    font-weight: bolder;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    gap: 20%;
+    padding-top: 10%;
+}
+.icon1
+{
+    border-style: solid;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 50%;
+    border-width: 3px;
+    color: green;
+}
+.icon2
+{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-style: solid;
+    padding-left: 10px;
+    padding-right: 3px;
+    border-radius: 50%;
+    border-width: 3px;
+}
+span
+{
+    padding-right: 10px;
+}
+
+.carousel
+{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    border-style: none;
+}
+
+@keyframes slide 
+{
+    0%
+    {
+        transform: translate(0);
+    }
+
+    100%
+    {
+        transform: translate(calc(-200px * 6));
+    }
+}
+
+.wrapper
+{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    animation: slide 10s linear infinite;
+    border: none;
+}
+
+.item
+{
+    width: 100%;
+    height: 90%;
+    flex-shrink: 0;
+    background-color: white;
+    border-radius: 5%;
+}
+
+.img
+{
+    width: 100%;
+    height: 100%;
+    filter: brightness(0);
+}
