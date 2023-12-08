@@ -192,7 +192,6 @@ img
     flex-wrap: wrap;
     justify-content: flex-around;
     height: 80%;
-    width: 90%;
     margin-left: 5%;
     background-color: var(--color1);  
     border-radius: 20px;
