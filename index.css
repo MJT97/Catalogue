@@ -99,6 +99,11 @@ header a
     align-items: center;
     justify-content: center;
 }
+.name
+{
+    font-size: 100px;
+    color: var(--color2);
+}
 .text
 {
     font-size: 30px;
