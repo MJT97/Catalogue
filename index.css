@@ -176,7 +176,7 @@ span
     gap: 10px;
      list-style: none;
     padding: 0;
-    animation: slide 7s linear infinite;
+    animation: slide 20s linear infinite;
     border: none;
 }
 .item
