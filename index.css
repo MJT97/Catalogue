@@ -216,7 +216,7 @@ img
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     background-color: var(--color1);  
     border-radius: 20px;
     border: solid var(--color4);
