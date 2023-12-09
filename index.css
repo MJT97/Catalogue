@@ -275,6 +275,10 @@ img
     list-style: none;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+#links a
+{
+    text-decoration: none;
+}
 .icon1
 {
     border-style: solid;
