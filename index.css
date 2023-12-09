@@ -148,6 +148,11 @@ span
     padding-right: 10px;
 }
 
+section
+{
+    overflow: hidden;
+}
+
 .carousel
 {
     height: 100vh;
