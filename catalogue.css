@@ -1,0 +1,122 @@
+:root
+{
+    --color1: pink;
+    --color2: red;
+    --color3: white;
+    --color4: rgb(104, 3, 3);
+    --color5: peachpuff;
+    --main-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --sub-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+*
+{
+    background-color: var(--color5);
+    padding: 0;
+    margin: 0;
+}
+fieldset
+{
+    border-radius: 10px;
+}
+a
+{
+    text-decoration: none;
+    color: var(--color4);
+    background-color: transparent;
+}
+.heading
+{
+    display: flex;
+    flex-direction: row;
+    font-family: var(--main-font);
+    font-weight: bolder;
+    font-size: x-large;
+    color: var(--color4);
+    justify-content: center;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--color1);
+    margin: 5px;
+}
+.products
+{
+    display: flex;
+    justify-content: start;
+    width: 50%;
+    background-color: transparent;
+    padding-left: 20px;
+}
+.contacts
+{
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    background-color: transparent;
+    padding-right: 20px;
+}
+main
+{
+    width: 100vw;
+}
+.t-shirts
+{
+    font-family: var(--main-font);
+    margin-left: 30px;
+    padding: 0 10px;
+    border: solid var(--color4);
+    border-radius: 10px;
+    background-color: var(--color1);
+    border-radius: 20px;
+}
+#t-shirts
+{
+    border: solid var(--color4);
+    background-color: var(--color1);
+    margin: 10px;
+    border-radius: 10px;
+    width: 70vw;
+}
+ul, li, img, .price
+{
+    background-color: transparent;
+}
+li
+{
+    text-decoration: none;
+}
+img
+{
+    border-radius: 10px;
+}
+
+.list1
+{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    overflow:scroll;
+}
+.item
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.price
+{
+    font-family: var(--main-font);
+    color: var(--color4);
+    border: solid var(--color4);
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+
+
+
+
