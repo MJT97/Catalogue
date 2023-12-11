@@ -76,7 +76,6 @@ main
 {
     border: solid var(--color4);
     background-color: var(--color1);
-    margin: 10px;
     border-radius: 10px;
     width: 70vw;
 }
