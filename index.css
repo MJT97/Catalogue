@@ -89,7 +89,7 @@ header a
 .banner
 {
     margin-top: 10px;
-    height: 95vh;
+    height: 90vh;
     background-color: var(--color1);
     border-style: none;
     border-radius: 10px;
@@ -98,6 +98,7 @@ header a
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 .name
 {
@@ -112,7 +113,7 @@ header a
 }
 .text
 {
-    font-size: 30px;
+    font-size: 50px;
     color: var(--color4);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
@@ -143,11 +144,6 @@ main, section
     flex: 3;
     background-color: rgb(207, 207, 207);
 }
-span
-{
-    padding-right: 10px;
-}
-
 section
 {
     overflow: hidden;
@@ -156,7 +152,7 @@ section
 .carousel
 {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     border-style: none;
 }
@@ -178,15 +174,15 @@ section
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
-     list-style: none;
+    gap: 30px;
+    list-style: none;
     padding: 0;
     animation: slide 20s linear infinite;
     border: none;
 }
 .item
 {
-    width: 100%;
+    width: 90%;
     height: 90%;
     flex-shrink: 0;
     background-color: white;
@@ -195,6 +191,9 @@ section
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: solid var(--color4);
+    box-shadow: var(--color4) 5px 5px 10px 5px;
+    overflow: hidden;
 }
 img
 {
@@ -211,18 +210,20 @@ img
     width: 80px;
     display: flex;
     justify-content: center;
-}.contacts
+}
+
+.contacts
 {
     display: flex;
+    height: 90vh;
+    margin: 20px;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
     background-color: var(--color1);  
     border-radius: 20px;
     border: solid var(--color4);
+    box-shadow: var(--color4) 5px 5px 10px 5px;
 }
-
-
 .note
 {
     width: 200px;
@@ -237,7 +238,6 @@ img
     justify-content: center;
     font-family: var(--main-font);
 }
-
 #par
 {
     gap: 10px;
@@ -290,6 +290,10 @@ img
     background-color: var(--color3);
     border-color: blue;
 }
+.icon1 a
+{
+    color: green;
+}
 .icon2
 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -305,18 +309,19 @@ img
 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-style: solid;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 6px;
+    padding-bottom: 0px;
     padding-left: 4px;
     padding-right: 4px;
     border-radius: 50%;
     border-width: 3px;
-    color:blue;
+    color:red;
     background-color: white;
     border-color: blue;
 }
 
-.item
-{
-    background-color: var(--color1);
+i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
