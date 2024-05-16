@@ -11,34 +11,49 @@
 html
 {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 1px;
 }
 *
 {
     padding: 0;
     margin: 0;
 }
+body header,main,section,footer
+{
+    scroll-snap-align: start;
+}
+
 header
 {
     border: none;
-    height: 40px;
-    padding-bottom: 20px;
+    height: fit-content;
     font-family: var(--main-font);
     background-color: var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 header fieldset
 {
-    border-style: none;
+
     background-color: var(--color1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    border: none;
+    height: fit-content;
 }
 header ul
 {
     list-style: none;
     display: flex;
     background-color: var(--color1);
-}
-header li
-{
-    margin-top: 10px;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 30px;
 }
 header a
 {
@@ -48,26 +63,20 @@ header a
 
 #logo
 {
-    float: left;
-    padding: 0;
-    margin: 0;
     font-family: var(--sub-font);
     color: var(--color2);
-    gap: 10px;
-    background-color: transparent;
+    display: flex;
+    align-items: center;
 }
 #logo img
 {
-    height: 50px;
-    width: 50px;
-    margin: 5px;
+    height: 60px;
+    width: 60px;
 }
 
 #tabs
 {
-    float: right;
     padding: 0;
-    margin-top: 10px;
 }
 #tabs li
 {
@@ -96,8 +105,8 @@ header a
     display:flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
 }
 .name
@@ -105,18 +114,51 @@ header a
     font-size: 100px;
     color: var(--color2);
 }
+.name img
+{
+    width: 80vw;
+}
 .subname
 {
-    font-size: 30px;
+    font-size: 50px;
+    font-weight: bolder;
     font-family: var(--sub-font);
     color: var(--color2);
 }
 .text
 {
-    font-size: 50px;
+    font-size: 200%;
     color: var(--color4);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social_btns
+{
+    width: 90%;
+    height: fit-content;
+    border: solid white;
+    border-radius: 50px ;
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.wa ,.fb
+{
+    width: 50px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wa,.fb a
+{
+    text-decoration: none;
 }
 
 main, section
@@ -151,7 +193,7 @@ section
 
 .carousel
 {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     overflow: hidden;
     border-style: none;
@@ -163,9 +205,13 @@ section
         transform: translate(0);
     }
 
+    50%
+    {
+        transform: translate(calc(-80vw * 6));
+    }
     100%
     {
-        transform: translate(calc(-80vw * 7));
+        transform: translate(0);
     }
 }
 .wrapper
@@ -177,7 +223,7 @@ section
     gap: 30px;
     list-style: none;
     padding: 0;
-    animation: slide 20s linear infinite;
+    animation: slide 30s linear infinite;
     border: none;
 }
 .item
@@ -200,128 +246,28 @@ img
     width: 100%;
     height: 95%;
 }
-.price
-{
-    border: solid var(--color4);
-    color: var(--color4);
-    border-radius: 10px;
-    font-family: var(--main-font);
-    font-weight: bold;
-    width: 80px;
-    display: flex;
-    justify-content: center;
-}
 
-.contacts
+footer
 {
-    display: flex;
-    height: 90vh;
-    margin: 20px;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--color1);  
-    border-radius: 20px;
-    border: solid var(--color4);
-    box-shadow: var(--color4) 5px 5px 10px 5px;
-}
-.note
-{
-    width: 200px;
-    height: 40px;
-    color: var(--color4);
-    border: solid var(--color4);
-    display: flex;
-    border-radius: 10px;
-    font-size: x-large;
-    font-weight: bolder;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--main-font);
-}
-#par
-{
-    gap: 10px;
     width: 90%;
-    height: 80%;
+    height: 80px;
+    margin-left: 5%;
     display: flex;
-    border-radius: 10px;
-    padding-left: 10px;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
-}
-#par img
-{
-    width: 50%;
-    height: 50%;
-}
-#links
-{
-    gap: 30%;
-    width: 50%;
-    height: 89%;
-    display: flex;
-    color: white;
-    padding-top: 0%;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: Bahnschrift;
+    background-color: peachpuff;
     border-radius: 10px;
-    font-size: x-large;
-    font-weight: bolder;
-    flex-direction: column;
-    justify-content:space-evenly;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 40);
 }
-#links li
+footer img
 {
-    list-style: none;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 70px;
+    width: 70px;
 }
-#links a
+footer p
 {
-    text-decoration: none;
-}
-.icon1
-{
-    border-style: solid;
-    padding-left: 3px;
-    padding-right: 3px;
-    border-radius: 50%;
-    border-width: 3px;
-    color: green;
-    background-color: var(--color3);
-    border-color: blue;
-}
-.icon1 a
-{
-    color: green;
-}
-.icon2
-{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-style: solid;
-    padding-left: 10px;
-    padding-right: 3px;
-    border-radius: 50%;
-    border-width: 3px;
-    color:blue;
-    background-color: white;
-}
-.icon3
-{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-style: solid;
-    padding-top: 6px;
-    padding-bottom: 0px;
-    padding-left: 4px;
-    padding-right: 4px;
-    border-radius: 50%;
-    border-width: 3px;
-    color:red;
-    background-color: white;
-    border-color: blue;
-}
-
-i{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: var(--gold);
+    font-weight: 900;
 }

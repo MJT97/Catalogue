@@ -79,7 +79,6 @@ html
     border-radius: 20px;
     border: solid var(--color4);
     box-shadow: var(--color4) 5px 5px 10px 5px;
-    overflow: hidden;
 }
 .note
 {
