@@ -1,54 +1,107 @@
 :root
 {
+    --pink: rgb(217, 112, 130);
+    --light-pink: rgb(251, 180, 192);
+    --dark-pink: rgb(212, 55, 81);
+    --dark-pink: rgb(158, 56, 73);
+    --red: red;
+    --light-red: rgb(152, 0, 0);
+    --dark-red: red;
+    --darker-red: rgb(91, 0, 0);
+    --purple: purple;
+    --light-purple: rgb(201, 0, 201);
+    --dark-purple: rgb(106, 0, 106);
+    --darker-purple: rgb(54, 0, 54);
     --color1: pink;
     --color2: red;
     --color3: white;
     --color4: rgb(104, 3, 3);
     --color5: peachpuff;
+    --color6: black;
     --main-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    --sub-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --sub-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    --purple-linear-grad: linear-gradient(to right, var(--purple), var(--light-purple), var(--purple));
+    --dark-linear-grad: linear-gradient(to right, var(--darker-red), var(--dark-red), var(--darker-red));
+    --dark-linear2-grad: linear-gradient(to top, var(--darker-red), var(--dark-red), var(--darker-red));
+    --dark-linear-grad-rev: linear-gradient(to right, var(--dark-red), var(--darker-red), var(--dark-red));
+    --dark-purple-linear-grad: linear-gradient(to right, var(--darker-purple), var(--dark-purple), var(--darker-purple));
+    --dark-purple-linear-grad-rev: linear-gradient(to right, var(--dark-purple), var(--darker-purple), var(--dark-purple));
+    --slider-duration: 14s;
+    --slider-amount: 7;
+    --start-pos: -40%;
+    --end-pos: 130%;
+    --bottom-pos: -60%;
+}
+/*--- ANIMATIONS ---*/
+@keyframes slideleft
+{
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-105vw);}
 }
 html
 {
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 1px;
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    background-color: var(--color6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    background: var(--dark-purple-linear-grad);
+}
+body header,main,section,footer
+{
+    scroll-snap-align: start;
 }
 *
 {
-    background-color: var(--color5);
     padding: 0;
     margin: 0;
 }
-fieldset
+li
 {
-    border-radius: 10px;
+    list-style: none;
 }
 a
 {
     text-decoration: none;
-    color: var(--color4);
-    background-color: transparent;
+}
+fieldset
+{
+    border-radius: 20px;
+    overflow-y: hidden;
 }
 .heading
 {
     display: flex;
     flex-direction: row;
     font-family: var(--main-font);
+    font-size: x-large;
     font-weight: bolder;
-    color: var(--color4);
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     border: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: var(--color1);
     margin: 5px;
     height: 30px;
-    box-shadow: var(--color4) 5px 5px 10px 5px;
+}
+.heading nav a
+{
+    color: var(--dark-red);
+    transition: 0.3s;
+}
+.heading nav a:hover
+{
+    color: var(--color1);
 }
 .home
 {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     width: 50%;
     background-color: transparent;
     padding-left: 20px;
@@ -56,7 +109,7 @@ a
 .contacts
 {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     width: 50%;
     background-color: transparent;
     padding-right: 20px;
@@ -71,19 +124,19 @@ main
 }
 .t-shirts
 {
+    color: var(--dark-purple);
     font-family: var(--main-font);
     margin-left: 30px;
     padding: 0 10px;
-    border: solid var(--color4);
+    border: solid var(--dark-pink);
     border-radius: 10px;
     background-color: var(--color1);
     border-radius: 20px;
 }
 #t-shirts
 {
-    border: solid var(--color4);
-    background-color: var(--color1);
-    box-shadow: var(--color4) 5px 5px 10px 5px;
+    border: solid var(--dark-pink);
+    box-shadow: var(--dark-pink) 0px 0px 5px 2px;
     height: fit-content;
     width: fit-content;
 }
@@ -118,7 +171,6 @@ img
 {
     font-family: var(--main-font);
     color: var(--color4);
-    border: solid var(--color4);
     padding: 0 10px;
     border-radius: 10px;    
 }
